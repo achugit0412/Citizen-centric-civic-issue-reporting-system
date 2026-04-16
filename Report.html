@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyCityFix</title>
+      <link rel="stylesheet" href="style.css">
+    
+</head>
+<style>
+        body{
+    background-image:url(photto.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+</style>
+<body>
+      <div class="navbar" >
+        <h2>MyCityFix</h2>
+        <ul>
+           <div class="translate">
+<div id="google_translate_element"></div>
+
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    includedLanguages: 'en,ta'
+  }, 'google_translate_element');
+}
+</script>
+
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</div>
+            <li><a href="index.html">Home</a></li>
+               <li><a href="MyReport.html">MyReport</a></li> 
+                <li><a href="DistrictFeed.html">DistrictFeed</a></li>
+                 <li><a href="Help.html">Help</a></li>
+                 <li><button class="Report" onclick="location.href='Report.html'">Report</button></li>
+        </ul>
+      </div>
+      
+      <div class="report">
+        <h2>Report here</h2>
+        <form id="reportForm">
+        <h4>Name</h4>
+        <input type="text" id="name" placeholder="Enter your name" required>
+        <h4>District</h4>
+        <input type="text" id="district" placeholder="Enter your district" required>
+        <h4>Issue</h4>
+         <input type="text" id="issue" placeholder="Enter your issue" required>
+         <h4>Date</h4>
+         <input type="date" id="date" placeholder="Enter your date" required>
+      </div>
+         <div  class="uploadimage">
+            
+            <input type="file" id="issueimage"  accept="image/*" class="hidden" style="width: 300px;" required>
+            <h3>📷 Upload issue image</h3>
+             <button class="btn">Report</button>
+         </div>
+         </form>
+  <script>
+document.getElementById('reportForm').addEventListener('submit', function(e) {
+    e.preventDefault(); 
+
+    
+    const district = document.getElementById('district').value;
+    const issue = document.getElementById('issue').value;
+
+    const report = {
+        district: district,
+        issue: issue,
+        date: new Date().toLocaleDateString()
+    };
+
+   
+    let reports = JSON.parse(localStorage.getItem('reports')) || [];
+    reports.push(report);
+    localStorage.setItem('reports', JSON.stringify(reports));
+    window.location.href = 'MyReport.html';
+});
+</script>
+
+</body>
+</html>
