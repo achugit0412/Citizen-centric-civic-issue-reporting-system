@@ -1,0 +1,143 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+h2 {
+    font-family:'Times New Roman', Times, serif;   
+    padding-left: 20px;
+}
+
+.navbar
+{
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ul{
+    list-style: none;
+    display:flex;
+    gap:15px;
+    align-items: center;
+}
+li{
+    font-family:Arial;
+    font-weight:bold;
+    cursor:pointer;
+        
+}
+.Report
+{
+    background-color:#2f9e9e;
+    border:none;
+    color:white;
+    border-radius:0;
+    height: 40px;
+    width: 70px;
+    margin-right: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.Report:hover{
+    background-color: #1b7878;
+}
+
+li a:hover
+{
+    color:#5f7c3a;
+    border-bottom: 3px solid #5f7c3a;
+    cursor:pointer;
+    
+}
+li a{
+    text-decoration: none;
+    color: #1f3f3f;
+}
+.report
+{
+    margin-left: 200px;
+    border: none;
+    border-radius: 6px;
+    color:black;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    display:flex;
+    
+    flex-direction: column;
+    align-items:flex-start;
+    gap:25px;
+}
+.btn{
+    width: 140px;
+    height: 40px;
+    margin-left: 200px;
+    background-color: #2f9e9e;
+    border: none;
+    margin-top: 40px;
+    color:white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.report input{
+    width:120%;
+    height: 50px;
+    background: transparent;
+    border-bottom: 1.5px solid black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-size: 15px;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.uploadimage
+{
+   margin-top: 50px;
+   margin-left: 200px;
+}
+
+.alamelu button
+{
+   width: 240px;
+    height: 40px;
+    margin: 20px;
+    background-color: #2f9e9e;
+    border: none;
+    border-radius: 6px;
+    margin-top: 2px;
+    color:white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.alamelu h4,h2,h3
+{
+ margin: 20px;
+}
+
+.alamelu hr{
+    border: none;
+    height: 3px;
+    background-color: rgba(0 ,0, 0, 0.25);
+}
+.sidebar
+{
+    display:flex;
+    flex-direction:row;
+    list-style: none;
+    display:flex;
+    gap:15px;
+    align-items:flex-start;
+    
+}
+.help p,h2,h1
+{
+    margin:3%;
+}
