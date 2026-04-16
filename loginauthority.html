@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>MyCityFix</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="index.css">
+      <link rel="stylesheet" href="loginuser.css">
+    <style>
+        body{
+    background-image:url(photto.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+</style>
+</head>
+<body>
+     <div class="navbar" >
+        <h2>MyCityFix</h2>
+        <ul>
+              <div class="translate">
+<div id="google_translate_element"></div>
+
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    includedLanguages: 'en,ta'
+  }, 'google_translate_element');
+}
+</script>
+
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</div>
+            <li><a href="index.html">Home</a></li>
+               <li><a href="MyReport.html">MyReport</a></li> 
+                <li><a href="DistrictFeed.html">DistrictFeed</a></li>
+                 <li><a href="Help.html">Help</a></li>
+                 <li><button class="Report" onclick="location.href='Report.html'">Report</button></li>
+        </ul>
+          </div> 
+
+        <div class="login-container">
+            <div class="form">
+        <h2> Authority Login</h2>
+        <form id="authorityForm">
+  <input type="text" id="name" placeholder="Name" required>
+  <input type="password" id="password" placeholder="Password" required>
+  <input type="text" id="designation" placeholder="Designation" required>
+
+  <select id="district" required style="
+  padding: 8px 14px;
+  font-size: 15px;
+  width: 200px; 
+  margin-top: 30px;
+">
+    <option value="">Select District</option>
+    <option value="chennai">Chennai</option>
+    <option value="erode">Erode</option>
+    <option value="coimbatore">Coimbatore</option>
+  </select>
+  <br>
+  <button type="submit" class="Login" >Login</button>
+</form>
+
+<script>
+document.getElementById("authorityForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const district = document.getElementById("district").value;
+  localStorage.setItem("authorityDistrict", district);
+
+  window.location.href = "authorityFeed.html";
+});
+</script>
+        
+
+
+    
+</body>
+</html>
