@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>MyCityFix</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="index.css">
+      <link rel="stylesheet" href="loginuser.css">
+    <style>
+        body{
+    background-image:url(photto.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+</style>
+</head>
+<body>
+     <div class="navbar" >
+        <h2>MyCityFix</h2>
+        <ul>
+              <div class="translate">
+<div id="google_translate_element"></div>
+
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    includedLanguages: 'en,ta'
+  }, 'google_translate_element');
+}
+</script>
+
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</div>
+            <li><a href="index.html">Home</a></li>
+               <li><a href="MyReport.html">MyReport</a></li> 
+                <li><a href="DistrictFeed.html">DistrictFeed</a></li>
+                 <li><a href="Help.html">Help</a></li>
+                 <li><button class="Report" onclick="location.href='Report.html'">Report</button></li>
+        </ul>
+          </div> 
+
+        <div class="login-container">
+            <div class="form">
+        <h2>Login here</h2>
+        <input type="tel" name="Phone Number" placeholder="Enter your number" pattern="[0-9]{10}" required>
+        <input type="password" name="Password" placeholder="Enter your password" required>
+        <button class="Login" onclick="location.href='index.html'">Login</button>
+        <p>Don't have an account?</p>
+        <a href="#">Sign up here</a>
+    </div>
+        
+
+
+    
+</body>
+</html>
