@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>MyCityFix</title>
+      <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body{
+        background-color: rgb(248, 231, 208);
+    }
+</style>
+<body>
+     <div class="navbar" >
+        <h2>MyCityFix</h2>
+        <ul>
+              <div class="translate">
+<div id="google_translate_element"></div>
+
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    includedLanguages: 'en,ta'
+  }, 'google_translate_element');
+}
+</script>
+
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</div>
+            <li><a href="index.html">Home</a></li>
+               <li><a href="MyReport.html">MyReport</a></li> 
+                <li><a href="DistrictFeed.html">DistrictFeed</a></li>
+                 <li><a href="Help.html">Help</a></li>
+                 <li><button class="Report" onclick="location.href='Report.html'">Report</button></li>
+        </ul>
+           
+      </div>
+      <div class="alamelu">
+        <h2>MY Report</h2>
+        <div class="reportcard">
+            <div class="report-header">
+                <h3>Pothole near Main Road</h3>
+                <h4>Location:Coimbatore</h4>
+                <h4>Date:10-10-2026</h4>
+            </div>
+            <button>Mark as Resolved</button>
+        </div>
+            <br>
+            <br>
+            <hr>
+            <div class="reportcard">
+            <div class="report-header">
+            <h3>Streetlight not working</h3>
+            <h4>Location:Erode</h4>
+            <h4>Date:10-10-2026</h4>
+            </div>
+            <button>Mark as Resolved</button>
+            </div>
+            <br>
+            <br>
+            <hr>
+            <div class="reportcard">
+            <div class="report-header">
+             <h3>Pothole near Main Road</h3>
+            <h4>Location:Chennai</h4>
+            <h4>Date:10-10-2026</h4>
+            </div>
+            <button>Mark as Resolved</button>
+            </div>
+            <br>
+            <br>
+            <hr>
+            <div id="reportsContainer"></div>
+           </div>
+</div>
+    <script>
+        const reportsContainer = document.getElementById('reportsContainer');
+        const reports = JSON.parse(localStorage.getItem('reports')) || [];
+
+        if (reports.length === 0) {
+            reportsContainer.innerHTML = "<p>No reports found.</p>";
+        } else {
+            reports.forEach(report => {
+                const card = document.createElement('div');
+                card.className = 'reportcard';
+
+                card.innerHTML = `
+                    <div class="report-header">
+                        <h3>${report.issue}</h3>
+                        <h4>District: ${report.district}</h4>
+                        <h4>Date: ${report.date}</h4>
+                    </div>
+                    <button onclick="markResolved(this)">Mark as Resolved</button>
+                `;
+
+                reportsContainer.appendChild(card);
+            });
+        }
+
+        function markResolved(button) {
+            button.disabled = true;
+            button.textContent = "Resolved";
+            button.parentElement.style.opacity = "0.6";
+        }
+    </script>
+
+</body>
+</html>
